@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nutricionista Digital</title>
+</head>
+
+<body>
+    <h1>Nutricionista Digital</h1>
+    <nav>
+        <ul>
+            <li><a href="#Sobre">Sobre</a></li>
+            <li><a href="Planos">Planos</a></li>
+            <li><a href="#IMC" role="scrollbar">Calculadora IMC</a></li>
+        </ul>
+    </nav>
+
+    <section class="Sobre">
+        <h2>Sobre</h2>
+        <p>O site Nutricionista Digital foi criado com a missão de transformar a forma como as pessoas se conectam com a
+            saúde e o bem-estar. Em um mundo cada vez mais agitado, onde o tempo é um recurso precioso, essa plataforma
+            oferece a comodidade de realizar consultas nutricionais de forma prática e eficiente, sem precisar sair de
+            casa. Com a Nutricionista Digital, você pode agendar suas consultas online, mantendo sua rotina intacta e
+            garantindo que sua saúde não seja deixada de lado.
+            A proposta é simples: levar o acompanhamento nutricional até você, permitindo que possa cuidar de sua
+            alimentação e atingir seus objetivos de maneira personalizada, sem a necessidade de deslocamentos longos ou
+            horários rígidos. Tudo pode ser feito com a flexibilidade de uma consulta virtual, com a mesma qualidade e
+            atenção que você receberia em um consultório físico. Dessa forma, você mantém o foco no que realmente
+            importa: sua saúde, sem perder tempo.
+            Com a Nutricionista Digital, sua jornada em direção a uma alimentação equilibrada e saudável se torna mais
+            acessível, ágil e adaptada às suas necessidades. É a praticidade do mundo digital a serviço de um estilo de
+            vida mais saudável. </p>
+    </section>
+
+    <section class="IMC">
+        <h3>Calculadora de IMC</h3>
+        <div class="container">
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" placeholder="Digite seu peso" required>
+
+            <label for="height">Altura (m):</label>
+            <input type="number" step="0.01" id="height" placeholder="Digite sua altura" required>
+
+            <button onclick="calculateIMC()">Calcular IMC</button>
+
+            <div class="result" id="result"></div>
+            <div class="classification" id="classification"></div>
+        </div>
+
+        <script>
+            function calculateIMC() {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+
+                if (!weight || !height) {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+
+                const imc = weight / (height * height);
+                let classification = '';
+
+                if (imc < 18.5) {
+                    classification = 'Abaixo do peso';
+                } else if (imc >= 18.5 && imc < 24.9) {
+                    classification = 'Peso normal';
+                } else if (imc >= 25 && imc < 29.9) {
+                    classification = 'Sobrepeso';
+                } else if (imc >= 30 && imc < 34.9) {
+                    classification = 'Obesidade grau 1';
+                } else if (imc >= 35 && imc < 39.9) {
+                    classification = 'Obesidade grau 2';
+                } else {
+                    classification = 'Obesidade grau 3';
+                }
+
+                document.getElementById('result').textContent = `IMC: ${imc.toFixed(2)}`;
+                document.getElementById('classification').textContent = `Classificação: ${classification}`;
+            }
+        </script>
+    </section>
+    
+    <section>
+        <h1>Planos</h1>
+        <h2>Plano Semanal</h2>
+        <img src="img/nutri.jpg" alt="nutricionista">
+        <footer>
+            <p>Plano duradouro de 1 semana, da nossa calculadora IMC e direito ao nutricionista digital.</p>
+        </footer>
+        <a href="https://link-de-compra.com/semana" class="botao-compra">Comprar por R$19,90</a>
+    </section>
+    
+    <section class="planomensal">
+        <h2>Plano Mensal</h2>
+        <img src="img/nutri.jpg" alt="nutricionista">
+        <footer>
+            <p>Plano duradouro de 1 mês, da nossa calculadora IMC e direito ao nutricionista digital.</p>
+        </footer>
+        <a href="https://link-de-compra.com/mensal" class="botao-compra">Comprar por R$49,98</a>
+    </section>
+
+    <section class="planoanual">
+        <h2>Plano Anual</h2>
+        <img src="img/nutri.jpg" alt="nutricionista">
+        <footer>
+            <p>Plano duradouro de 1 ano, da nossa calculadora IMC e direito ao nutricionista digital.</p>
+        </footer>
+        <a href="https://link-de-compra.com/anual" class="botao-compra">Comprar por R$269,98</a>
+    </section>
+
+
+
+</body>
+
+</html>

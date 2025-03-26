@@ -1,0 +1,92 @@
+/* Estilos gerais para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilização do título principal */
+h1 {
+    text-align: center;
+    color: #2E8B57; /* Verde escuro */
+    margin-top: 20px;
+}
+
+/* Estilização da navegação */
+nav {
+    background-color: #32CD32; /* Verde limão */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #2E8B57; /* Verde escuro */
+}
+
+/* Estilo das seções */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+section h2, section h3 {
+    color: #32CD32; /* Verde limão */
+}
+
+/* Estilo do texto dentro das seções */
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilo para links */
+a {
+    color: #32CD32;
+}
+
+a:hover {
+    color: #2E8B57;
+}
+
+.botao-compra {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao-compra:hover {
+    background-color: #45a049;
+}
+
+section {
+    margin-bottom: 20px;
+}
